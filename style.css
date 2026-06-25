@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#ef5350;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    background:white;
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#ef5350;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.botoes{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ef5350;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#resultado{
+    margin-top:20px;
+    text-align:center;
+}
+
+#resultado img{
+    width:220px;
+}
+
+.info{
+    margin-top:15px;
+    text-align:left;
+}
+
+.info p{
+    margin:8px 0;
+}
+
+.loading{
+    font-weight:bold;
+    animation:pulsar 1s infinite;
+}
+
+@keyframes pulsar{
+    50%{
+        opacity:0.4;
+    }
+}
+
+.stat{
+    margin-top:10px;
+}
+
+.stat span{
+    display:block;
+    margin-bottom:5px;
+}
+
+.barra{
+    width:100%;
+    background:#ddd;
+    height:18px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.preenchimento{
+    height:100%;
+    background:#4CAF50;
+}
+
+.historico-container{
+    margin-top:25px;
+}
+
+.historico-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.historico-header h2{
+    color:#333;
+    font-size:20px;
+}
+
+#limparHistoricoBtn{
+    flex:none;
+    padding:8px 12px;
+    background:#666;
+    font-size:14px;
+}
+
+#limparHistoricoBtn:hover{
+    background:#444;
+}
+
+#historico{
+    list-style:none;
+}
+
+#historico li{
+    padding:10px;
+    background:#f2f2f2;
+    border-radius:8px;
+    margin-bottom:5px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#historico li:hover{
+    background:#ddd;
+}
+
+.erro{
+    color:red;
+    font-weight:bold;
+}
+
+@media(max-width:500px){
+
+    .botoes{
+        flex-direction:column;
+    }
+
+    .historico-header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    #resultado img{
+        width:180px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Pokédex</h1>
+
+        <input
+            type="text"
+            id="pokemonInput"
+            placeholder="Digite o nome ou número do Pokémon">
+
+        <div class="botoes">
+            <button onclick="buscarPokemon()">
+                Buscar
+            </button>
+
+            <button onclick="pokemonAleatorio()">
+                Aleatório
+            </button>
+        </div>
+
+        <div id="resultado"></div>
+
+        <div class="historico-container">
+
+            <div class="historico-header">
+                <h2>Últimas Pesquisas</h2>
+
+                <button
+                    id="limparHistoricoBtn"
+                    onclick="limparHistorico()">
+                    Limpar Histórico
+                </button>
+            </div>
+
+            <ul id="historico"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
